@@ -1,0 +1,74 @@
+object FrmMain: TFrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 510
+  ClientWidth = 755
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object HorzScrollBox1: THorzScrollBox
+    Align = Client
+    Padding.Left = 5.000000000000000000
+    Padding.Top = 20.000000000000000000
+    Padding.Right = 5.000000000000000000
+    Padding.Bottom = 20.000000000000000000
+    Size.Width = 755.000000000000000000
+    Size.Height = 461.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 755.000000000000000000
+    Viewport.Height = 461.000000000000000000
+    object Layout2: TLayout
+      Align = Left
+      Padding.Left = 2.000000000000000000
+      Padding.Top = 2.000000000000000000
+      Padding.Right = 2.000000000000000000
+      Padding.Bottom = 2.000000000000000000
+      Margins.Left = 20.000000000000000000
+      Position.X = 25.000000000000000000
+      Position.Y = 20.000000000000000000
+      Size.Width = 257.000000000000000000
+      Size.Height = 421.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+    end
+  end
+  object Layout1: TLayout
+    Align = Top
+    Size.Width = 755.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    object btnConsultar: TButton
+      Position.X = 504.000000000000000000
+      Position.Y = 11.000000000000000000
+      TabOrder = 0
+      Text = 'Consultar'
+      OnClick = btnConsultarClick
+    end
+    object cbbEmpresa: TComboBox
+      Items.Strings = (
+        '')
+      Position.X = 80.000000000000000000
+      Position.Y = 11.000000000000000000
+      Size.Width = 385.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+    end
+    object Line1: TLine
+      Align = Bottom
+      LineType = Bottom
+      Position.Y = 40.000000000000000000
+      Size.Width = 755.000000000000000000
+      Size.Height = 9.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claGray
+      Stroke.Thickness = 0.500000000000000000
+    end
+  end
+end
