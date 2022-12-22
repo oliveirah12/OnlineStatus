@@ -25,7 +25,7 @@ type
     { Public declarations }
   end;
 
-  //teste7
+  //teste
 
 
 var
