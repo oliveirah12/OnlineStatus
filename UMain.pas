@@ -25,6 +25,8 @@ type
     { Public declarations }
   end;
 
+  //teste
+
 var
   FrmMain: TFrmMain;
 
