@@ -7,7 +7,7 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
   FMX.Controls.Presentation, FMX.StdCtrls, FMX.ListBox, FMX.ListView.Types,
   FMX.ListView.Appearances, FMX.ListView.Adapters.Base, FMX.ListView,
-  FMX.Objects, FMX.Layouts;
+  FMX.Objects, FMX.Layouts, FMX.Ani;
 
 type
   TFrmMain = class(TForm)
@@ -41,18 +41,22 @@ uses
   XSuperObject,
   Commun.RestApi,
   Commun.Utils,
+  UfrmCard,
   Entities.Online;
+
 
 {$R *.fmx}
 
 procedure TFrmMain.btnConsultarClick(Sender: TObject);
 var
   vCodigoEmpresa : string;
+  x : TOnline;
+  t1, t2, t3, t4 : TLayout;
 begin
   vCodigoEmpresa := '';
 
   if cbbEmpresa.Items.Count > 0 then
-    if cbbEmpresa.Selected.IsSelected then
+    if cbbEmpresa.Selected <> nil then
       vCodigoEmpresa := cbbEmpresa.Selected.Text.Split(['-'])[0].Trim;
 
   if vCodigoEmpresa.trim.IsEmpty then
@@ -73,11 +77,35 @@ begin
 
   if vCodeResp <> 200 then
   begin
-    ShowMessage('Erro ao consutar api! Erro: ' + vJsonResp);
+    ShowMessage('Erro ao consultar api! Erro: ' + vJsonResp);
     Exit;
   end;
 
   var vRepOnline := TOnline.FromJSON(vJsonResp);
+
+  t1 := TLayout.Create(HorzScrollBox1);
+
+  t1.Parent := HorzScrollBox1;
+
+
+  for var vEmpresa in vRepOnline.empresas do
+    begin
+
+    end;
+
+
+  frmCard := TfrmCard.Create(self);
+
+  frmCard.PopulaDados(vRepOnline.empresas[0]);
+
+  HorzScrollBox1.AddObject(frmCard);
+  frmCard.Show;
+
+  ShowMessage(vJsonResp);
+
+
+
+
 
 
 
@@ -107,5 +135,6 @@ begin
 
 
 end;
+
 
 end.

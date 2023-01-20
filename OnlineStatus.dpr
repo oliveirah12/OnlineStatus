@@ -4,7 +4,7 @@ uses
   System.StartUpCopy,
   FMX.Forms,
   UMain in 'UMain.pas' {FrmMain},
-  frmCard in 'frmCard.pas' {Form2},
+  UfrmCard in 'UfrmCard.pas' {frmCard},
   Commun.RestApi in 'commun\Commun.RestApi.pas',
   Commun.Utils in 'commun\Commun.Utils.pas',
   XSuperJSON in 'lib\XSuperObject\XSuperJSON.pas',
@@ -16,6 +16,6 @@ uses
 begin
   Application.Initialize;
   Application.CreateForm(TFrmMain, FrmMain);
-  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TfrmCard, frmCard);
   Application.Run;
 end.
