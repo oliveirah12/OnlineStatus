@@ -16,7 +16,6 @@ type
     Layout1: TLayout;
     Line1: TLine;
     HorzScrollBox1: THorzScrollBox;
-    Layout2: TLayout;
     procedure btnConsultarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
@@ -50,8 +49,11 @@ uses
 procedure TFrmMain.btnConsultarClick(Sender: TObject);
 var
   vCodigoEmpresa : string;
-  x : TOnline;
-  t1, t2, t3, t4 : TLayout;
+  vCodeResp  : integer;
+  vJsonResp : string;
+  vRepOnline : TOnline;
+  listaLayout : TArray<TLayout>;
+  x : integer;
 begin
   vCodigoEmpresa := '';
 
@@ -66,9 +68,6 @@ begin
   end;
 
 
-  var vCodeResp := 0;
-  var vJsonResp := '';
-
   TRestAPI.New
     .SetUrl(FURL + DASHBOARD,'')
     .SetParamsHeader('empresa',vCodigoEmpresa)
@@ -81,32 +80,31 @@ begin
     Exit;
   end;
 
-  var vRepOnline := TOnline.FromJSON(vJsonResp);
-
-  t1 := TLayout.Create(HorzScrollBox1);
-
-  t1.Parent := HorzScrollBox1;
+  vRepOnline := TOnline.FromJSON(vJsonResp);
 
 
-  for var vEmpresa in vRepOnline.empresas do
+  SetLength(listaLayout, vRepOnline.empresas.Count);
+  //listaLayout.Create;
+
+
+    for x := 0 to vRepOnline.empresas.Count-1 do
     begin
 
+      listaLayout[x]                := TLayout.Create(HorzScrollBox1);
+      listaLayout[x].Parent         := HorzScrollBox1;
+      listaLayout[x].Align          := TAlignLayout.left;
+      listaLayout[x].Margins.Left   := 20;
+      listaLayout[x].Margins.Bottom := 20;
+
+
+      frmCard.PopulaDados(vRepOnline.empresas[x]);
+      listaLayout[x].AddObject(frmCard.layStatusCard);
+      HorzScrollBox1.AddObject(listaLayout[x]);
+
+
+
+
     end;
-
-
-  frmCard := TfrmCard.Create(self);
-
-  frmCard.PopulaDados(vRepOnline.empresas[0]);
-
-  HorzScrollBox1.AddObject(frmCard);
-  frmCard.Show;
-
-  ShowMessage(vJsonResp);
-
-
-
-
-
 
 
 end;
@@ -114,6 +112,7 @@ end;
 procedure TFrmMain.FormCreate(Sender: TObject);
 var
   vDic : TDictionary<string, string>;
+  vKey : string;
 begin
   FURL := RetornaValorIni('CONFIG', 'HOST',  '127.0.0.1');
 
@@ -123,7 +122,9 @@ begin
 
     RetornaValorSessaoIni('EMPRESAS', vDic);
 
-    for var vKey in vDic.Keys do
+
+
+    for vKey in vDic.Keys do
       cbbEmpresa.Items.Add(vKey + ' - ' + vdic.Items[vKey]);
 
   finally
