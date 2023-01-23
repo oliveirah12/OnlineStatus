@@ -22,20 +22,6 @@ object FrmMain: TFrmMain
     TabOrder = 0
     Viewport.Width = 755.000000000000000000
     Viewport.Height = 461.000000000000000000
-    object Layout2: TLayout
-      Align = Left
-      Padding.Left = 2.000000000000000000
-      Padding.Top = 2.000000000000000000
-      Padding.Right = 2.000000000000000000
-      Padding.Bottom = 2.000000000000000000
-      Margins.Left = 20.000000000000000000
-      Position.X = 25.000000000000000000
-      Position.Y = 20.000000000000000000
-      Size.Width = 257.000000000000000000
-      Size.Height = 421.000000000000000000
-      Size.PlatformDefault = False
-      TabOrder = 0
-    end
   end
   object Layout1: TLayout
     Align = Top
