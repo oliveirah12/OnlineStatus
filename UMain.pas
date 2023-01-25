@@ -109,28 +109,27 @@ begin
     for x := 0 to vRepOnline.empresas.Count-1 do
     begin
 
-      //listaLayout[x]                := TLayout.Create(HorzScrollBox1);
-      //listaLayout[x].Parent         := HorzScrollBox1;
-      //listaLayout[x].Align          := TAlignLayout.left;
-      //listaLayout[x].Margins.Left   := 20;
-      //listaLayout[x].Margins.Bottom := 20;
-      //listaLayout[x].Height := 409;
-      //listaLayout[x].Width  := 200;
-
-      card := TLayout.Create(HorzScrollBox1);
-      card.Parent := HorzScrollBox1;
+      card                := TLayout.Create(HorzScrollBox1);
+      card.Parent         := HorzScrollBox1;
+      card                := layStatusCard;
+      card.Align          := TAlignLayout.left;
+      card.Margins.Left   := 20;
+      card.Margins.Bottom := 20;
 
 
 
       PopulaDados(vRepOnline.empresas[x]);
-      HorzScrollBox1.Clone(layStatusCard);
-      HorzScrollBox1.AddObject(card);
+
+
+      HorzScrollBox1.AddObject(layStatusCard.clone(card));
+
       card.Visible := true;
-      layStatusCard.Visible := true;
+
+
+
 
 
     end;
-
 
 
 end;
