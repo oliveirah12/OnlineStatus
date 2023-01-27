@@ -38,6 +38,7 @@ type
     lblDataErro: TLabel;
     procedure btnConsultarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure limparScroll();
   private
     FURL : string;
   public
@@ -66,6 +67,7 @@ uses
 
 
 {$R *.fmx}
+{$R *.Windows.fmx MSWINDOWS}
 
 procedure TFrmMain.btnConsultarClick(Sender: TObject);
 var
@@ -104,32 +106,28 @@ begin
 
   vRepOnline := TOnline.FromJSON(vJsonResp);
 
+  if HorzScrollBox1.Content.ChildrenCount > 1 then
+    limparScroll();
 
 
-    for x := 0 to vRepOnline.empresas.Count-1 do
-    begin
+  for x := 0 to vRepOnline.empresas.Count - 1  do
+  begin
+    PopulaDados(vRepOnline.empresas[x]);
+    card := TLayout(layStatusCard.Clone(HorzScrollBox1));
 
-      card                := TLayout.Create(HorzScrollBox1);
-      card.Parent         := HorzScrollBox1;
-      card                := layStatusCard;
-      card.Align          := TAlignLayout.left;
-      card.Margins.Left   := 20;
+    try
+      card.Parent := HorzScrollBox1;
+      card.Align := TAlignLayout.left;
+      card.Margins.Left := 20;
       card.Margins.Bottom := 20;
-
-
-
-      PopulaDados(vRepOnline.empresas[x]);
-
-
-      HorzScrollBox1.AddObject(layStatusCard.clone(card));
-
       card.Visible := true;
-
-
-
-
-
+      HorzScrollBox1.AddObject(card);
+    except
+      card.Free;
+      raise;
     end;
+  end;
+
 
 
 end;
@@ -187,6 +185,9 @@ begin
   lblDataErro.Text := formatDateTime('dd/mm/yyyy HH:NN:SS', PDados.erros.data);
 
   lsvPendente.Items.Clear;
+  lblPendente.Text := 'Pendente: ' + PDados.pendentes.Count.ToString;
+
+
 
   for pendente in PDados.pendentes do
   begin
@@ -197,5 +198,13 @@ begin
   end;
 
 end;
+
+procedure TFrmMain.limparScroll();
+  var
+    i : Integer;
+  begin
+    for i := HorzScrollBox1.Content.ChildrenCount - 1 downto 1 do
+    HorzScrollBox1.Content.Children[i].Free;
+  end;
 
 end.

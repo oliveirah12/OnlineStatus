@@ -1,14 +1,17 @@
 object FrmMain: TFrmMain
-  Left = 0
-  Top = 0
+  Left = 170
+  Top = 64
   Caption = 'Form1'
-  ClientHeight = 510
+  ClientHeight = 595
   ClientWidth = 755
   Fill.Kind = Solid
+  Position = Designed
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
   OnCreate = FormCreate
+  Left = 170
+  Top = 64
   DesignerMasterStyle = 0
   object HorzScrollBox1: THorzScrollBox
     Align = Client
@@ -17,20 +20,20 @@ object FrmMain: TFrmMain
     Padding.Right = 5.000000000000000000
     Padding.Bottom = 20.000000000000000000
     Size.Width = 755.000000000000000000
-    Size.Height = 461.000000000000000000
+    Size.Height = 546.000000000000000000
     Size.PlatformDefault = False
     TabOrder = 0
     Viewport.Width = 755.000000000000000000
-    Viewport.Height = 461.000000000000000000
+    Viewport.Height = 546.000000000000000000
     object layStatusCard: TLayout
       Padding.Left = 2.000000000000000000
       Padding.Top = 2.000000000000000000
       Padding.Right = 2.000000000000000000
       Padding.Bottom = 2.000000000000000000
       Position.X = 32.000000000000000000
-      Position.Y = 16.000000000000000000
+      Position.Y = 32.000000000000000000
       Size.Width = 257.000000000000000000
-      Size.Height = 409.000000000000000000
+      Size.Height = 505.000000000000000000
       Size.PlatformDefault = False
       Visible = False
       TabOrder = 0
@@ -42,7 +45,7 @@ object FrmMain: TFrmMain
         Padding.Right = 5.000000000000000000
         Padding.Bottom = 5.000000000000000000
         Size.Width = 253.000000000000000000
-        Size.Height = 405.000000000000000000
+        Size.Height = 501.000000000000000000
         Size.PlatformDefault = False
         Stroke.Color = claBlue
         XRadius = 5.000000000000000000
@@ -216,7 +219,7 @@ object FrmMain: TFrmMain
           Margins.Bottom = 5.000000000000000000
           Sides = []
           Size.Width = 243.000000000000000000
-          Size.Height = 100.000000000000000000
+          Size.Height = 196.000000000000000000
           Size.PlatformDefault = False
           object lblPendente: TLabel
             Align = Top
@@ -239,7 +242,7 @@ object FrmMain: TFrmMain
             FooterAppearanceClassName = 'TListHeaderObjects'
             Align = Client
             Size.Width = 237.000000000000000000
-            Size.Height = 64.000000000000000000
+            Size.Height = 160.000000000000000000
             Size.PlatformDefault = False
             TabOrder = 5
             ItemAppearance.ItemHeight = 30
