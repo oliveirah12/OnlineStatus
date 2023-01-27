@@ -7,7 +7,7 @@ uses
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
   FMX.Controls.Presentation, FMX.StdCtrls, FMX.ListBox, FMX.ListView.Types,
   FMX.ListView.Appearances, FMX.ListView.Adapters.Base, FMX.ListView,
-  FMX.Objects, FMX.Layouts, FMX.Ani;
+  FMX.Objects, FMX.Layouts, FMX.Ani, Entities.Online;
 
 type
   TFrmMain = class(TForm)
@@ -16,11 +16,33 @@ type
     Layout1: TLayout;
     Line1: TLine;
     HorzScrollBox1: THorzScrollBox;
+    layStatusCard: TLayout;
+    rec_card: TRectangle;
+    rec_sigla: TRectangle;
+    lblDataSinc: TLabel;
+    lblSigla: TLabel;
+    rec_enviado: TRectangle;
+    lblEnviado: TLabel;
+    lblDataEnviado: TLabel;
+    rec_recebido: TRectangle;
+    lblRecebido: TLabel;
+    lblDataRecebido: TLabel;
+    rec_mensagem: TRectangle;
+    lblAlerta: TLabel;
+    lblDataAlerta: TLabel;
+    rec_pendente: TRectangle;
+    lblPendente: TLabel;
+    lsvPendente: TListView;
+    rec_erro: TRectangle;
+    lblErro: TLabel;
+    lblDataErro: TLabel;
     procedure btnConsultarClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure limparScroll();
   private
     FURL : string;
   public
+    procedure PopulaDados(PDados : TOnlineEmpresa);
     { Public declarations }
   end;
 
@@ -40,11 +62,12 @@ uses
   XSuperObject,
   Commun.RestApi,
   Commun.Utils,
-  UfrmCard,
-  Entities.Online;
+  UfrmCard;
+
 
 
 {$R *.fmx}
+{$R *.Windows.fmx MSWINDOWS}
 
 procedure TFrmMain.btnConsultarClick(Sender: TObject);
 var
@@ -52,8 +75,9 @@ var
   vCodeResp  : integer;
   vJsonResp : string;
   vRepOnline : TOnline;
-  listaLayout : TArray<TLayout>;
+  listaLayout : array[0..5] of TLayout;
   x : integer;
+  card : TLayout;
 begin
   vCodigoEmpresa := '';
 
@@ -82,29 +106,28 @@ begin
 
   vRepOnline := TOnline.FromJSON(vJsonResp);
 
-
-  SetLength(listaLayout, vRepOnline.empresas.Count);
-  //listaLayout.Create;
-
-
-    for x := 0 to vRepOnline.empresas.Count-1 do
-    begin
-
-      listaLayout[x]                := TLayout.Create(HorzScrollBox1);
-      listaLayout[x].Parent         := HorzScrollBox1;
-      listaLayout[x].Align          := TAlignLayout.left;
-      listaLayout[x].Margins.Left   := 20;
-      listaLayout[x].Margins.Bottom := 20;
+  if HorzScrollBox1.Content.ChildrenCount > 1 then
+    limparScroll();
 
 
-      frmCard.PopulaDados(vRepOnline.empresas[x]);
-      listaLayout[x].AddObject(frmCard.layStatusCard);
-      HorzScrollBox1.AddObject(listaLayout[x]);
+  for x := 0 to vRepOnline.empresas.Count - 1  do
+  begin
+    PopulaDados(vRepOnline.empresas[x]);
+    card := TLayout(layStatusCard.Clone(HorzScrollBox1));
 
-
-
-
+    try
+      card.Parent := HorzScrollBox1;
+      card.Align := TAlignLayout.left;
+      card.Margins.Left := 20;
+      card.Margins.Bottom := 20;
+      card.Visible := true;
+      HorzScrollBox1.AddObject(card);
+    except
+      card.Free;
+      raise;
     end;
+  end;
+
 
 
 end;
@@ -137,5 +160,51 @@ begin
 
 end;
 
+
+procedure TFrmMain.PopulaDados(PDados: TOnlineEmpresa);
+var
+  item : TListViewItem;
+  pendente : TOnlinePendente;
+begin
+  if not Assigned(PDados) then
+    Exit;
+
+  lblSigla.Text    := PDados.sigla;
+  lblDataSinc.Text := formatDateTime('dd/mm/yyyy HH:NN:SS', PDados.datasinc);
+
+  lblEnviado.Text  := 'Enviado : ' + PDados.enviados.qtd.ToString;
+  lblDataEnviado.Text := formatDateTime('dd/mm/yyyy HH:NN:SS', PDados.enviados.data);
+
+  lblRecebido.Text  := 'Recebido : ' + PDados.recebidos.qtd.ToString;
+  lblDataRecebido.Text := formatDateTime('dd/mm/yyyy HH:NN:SS', PDados.recebidos.data);
+
+  lblAlerta.Text  := 'Alerta : ' + PDados.mensagens.qtd.ToString;
+  lblDataAlerta.Text := formatDateTime('dd/mm/yyyy HH:NN:SS', PDados.mensagens.data);
+
+  lblErro.Text  := 'Erro : ' + PDados.erros.qtd.ToString;
+  lblDataErro.Text := formatDateTime('dd/mm/yyyy HH:NN:SS', PDados.erros.data);
+
+  lsvPendente.Items.Clear;
+  lblPendente.Text := 'Pendente: ' + PDados.pendentes.Count.ToString;
+
+
+
+  for pendente in PDados.pendentes do
+  begin
+    item := lsvPendente.Items.Add;
+    item.Detail := pendente.tipoarquivo;
+    item.Objects.FindObjectT<TListItemText>('txtQtdLog').Text := pendente.qtd.ToString;
+    item.Objects.FindObjectT<TListItemText>('txtLog').Text := pendente.tipoarquivo;
+  end;
+
+end;
+
+procedure TFrmMain.limparScroll();
+  var
+    i : Integer;
+  begin
+    for i := HorzScrollBox1.Content.ChildrenCount - 1 downto 1 do
+    HorzScrollBox1.Content.Children[i].Free;
+  end;
 
 end.
