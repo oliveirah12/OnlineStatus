@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/06/10 20:05:20.000.028,=C:\Users\pauli\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/06/13 14:08:01.000.973,=C:\Users\pauli\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/21 09:00:46.000.516,=C:\Users\pauli\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/21 09:08:49.000.729,=C:\Users\pauli\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/12/21 10:50:31.000.061,C:\Users\pauli\Documents\Embarcadero\Studio\Projects\Unit1.fmx=C:\DEV\Fontes\Teste\OnlineClient\UMain.fmx</Transaction>
+    <Transaction>2022/12/21 10:50:31.000.061,C:\Users\pauli\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\DEV\Fontes\Teste\OnlineClient\UMain.pas</Transaction>
+    <Transaction>2022/12/21 10:51:02.000.167,C:\Users\pauli\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\DEV\Fontes\Teste\OnlineClient\OnlineStatus.dproj</Transaction>
+    <Transaction>2022/12/21 11:04:55.000.196,=C:\DEV\Fontes\Teste\OnlineClient\Unit1.pas</Transaction>
+    <Transaction>2022/12/21 11:05:31.000.839,=C:\DEV\Fontes\Teste\OnlineClient\Unit2.pas</Transaction>
+    <Transaction>2022/12/21 11:06:30.000.921,C:\DEV\Fontes\Teste\OnlineClient\Unit2.pas=C:\DEV\Fontes\Teste\OnlineClient\frmCard.pas</Transaction>
+    <Transaction>2022/12/21 11:06:30.000.921,C:\DEV\Fontes\Teste\OnlineClient\Unit2.fmx=C:\DEV\Fontes\Teste\OnlineClient\frmCard.fmx</Transaction>
+    <Transaction>2022/12/21 11:12:46.000.515,=C:\DEV\Fontes\Teste\OnlineClient\commun\Commun.Utils.pas</Transaction>
+    <Transaction>2022/12/21 11:12:46.000.481,=C:\DEV\Fontes\Teste\OnlineClient\commun\Commun.RestApi.pas</Transaction>
+    <Transaction>2022/12/21 11:15:28.000.940,=C:\DEV\Fontes\Teste\OnlineClient\lib\XSuperObject\XSuperObject.pas</Transaction>
+    <Transaction>2022/12/21 11:15:28.000.870,=C:\DEV\Fontes\Teste\OnlineClient\lib\XSuperObject\XSuperJSON.pas</Transaction>
+    <Transaction>2022/12/21 11:27:11.000.555,=C:\DEV\Fontes\Teste\OnlineClient\Unit1.pas</Transaction>
+    <Transaction>2022/12/21 11:27:43.000.844,C:\DEV\Fontes\Teste\OnlineClient\Unit1.pas=C:\DEV\Fontes\Teste\OnlineClient\Entities.Online.pas</Transaction>
+    <Transaction>2023/01/20 10:41:59.000.094,C:\Users\User\Desktop\OnlineClient\frmCard.fmx=C:\Users\User\Desktop\OnlineClient\UfrmCard.fmx</Transaction>
+    <Transaction>2023/01/20 10:41:59.000.094,C:\Users\User\Desktop\OnlineClient\frmCard.pas=C:\Users\User\Desktop\OnlineClient\UfrmCard.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

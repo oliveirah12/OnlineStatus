@@ -24,8 +24,8 @@ object FrmMain: TFrmMain
     Size.PlatformDefault = False
     TabOrder = 0
     Viewport.Width = 755.000000000000000000
-    Viewport.Height = 546.000000000000000000
-    object layStatusCard: TLayout
+    Viewport.Height = 530.000000000000000000
+    object Card1: TLayout
       Padding.Left = 2.000000000000000000
       Padding.Top = 2.000000000000000000
       Padding.Right = 2.000000000000000000
@@ -35,9 +35,8 @@ object FrmMain: TFrmMain
       Size.Width = 257.000000000000000000
       Size.Height = 505.000000000000000000
       Size.PlatformDefault = False
-      Visible = False
-      TabOrder = 0
-      object rec_card: TRectangle
+      TabOrder = 4
+      object rec_card1: TRectangle
         Align = Client
         Fill.Color = claWhite
         Padding.Left = 5.000000000000000000
@@ -50,7 +49,7 @@ object FrmMain: TFrmMain
         Stroke.Color = claBlue
         XRadius = 5.000000000000000000
         YRadius = 5.000000000000000000
-        object rec_sigla: TRectangle
+        object rec_sigla_card1: TRectangle
           Align = Top
           Fill.Kind = None
           Padding.Left = 3.000000000000000000
@@ -64,7 +63,7 @@ object FrmMain: TFrmMain
           Size.Width = 243.000000000000000000
           Size.Height = 60.000000000000000000
           Size.PlatformDefault = False
-          object lblDataSinc: TLabel
+          object lblDataSincCard1: TLabel
             Align = Bottom
             StyledSettings = [Family, Style, FontColor]
             Position.X = 3.000000000000000000
@@ -77,7 +76,7 @@ object FrmMain: TFrmMain
             Text = '01/12/2022 01:00:05'
             TabOrder = 0
           end
-          object lblSigla: TLabel
+          object lblSiglaCard1: TLabel
             Align = Top
             StyledSettings = [Family, FontColor]
             Position.X = 3.000000000000000000
@@ -92,7 +91,7 @@ object FrmMain: TFrmMain
             TabOrder = 1
           end
         end
-        object rec_enviado: TRectangle
+        object rec_enviado_card1: TRectangle
           Align = Top
           Fill.Kind = None
           Padding.Left = 3.000000000000000000
@@ -106,7 +105,7 @@ object FrmMain: TFrmMain
           Size.Width = 243.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
-          object lblEnviado: TLabel
+          object lblEnviadoCard1: TLabel
             Align = Top
             StyledSettings = [Family, Style, FontColor]
             Position.X = 3.000000000000000000
@@ -119,7 +118,7 @@ object FrmMain: TFrmMain
             Text = 'Enviados: 15280'
             TabOrder = 4
           end
-          object lblDataEnviado: TLabel
+          object lblDataEnviadoCard1: TLabel
             Align = Bottom
             Position.X = 3.000000000000000000
             Position.Y = 25.000000000000000000
@@ -131,7 +130,7 @@ object FrmMain: TFrmMain
             TabOrder = 7
           end
         end
-        object rec_recebido: TRectangle
+        object rec_recebido_card1: TRectangle
           Align = Top
           Fill.Kind = None
           Padding.Left = 3.000000000000000000
@@ -145,7 +144,7 @@ object FrmMain: TFrmMain
           Size.Width = 243.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
-          object lblRecebido: TLabel
+          object lblRecebidoCard1: TLabel
             Align = Top
             StyledSettings = [Family, Style, FontColor]
             Position.X = 3.000000000000000000
@@ -158,7 +157,7 @@ object FrmMain: TFrmMain
             Text = 'Recebido: 6259'
             TabOrder = 4
           end
-          object lblDataRecebido: TLabel
+          object lblDataRecebidoCard1: TLabel
             Align = Bottom
             Position.X = 3.000000000000000000
             Position.Y = 25.000000000000000000
@@ -170,7 +169,7 @@ object FrmMain: TFrmMain
             TabOrder = 7
           end
         end
-        object rec_mensagem: TRectangle
+        object rec_mensagem_card1: TRectangle
           Align = Top
           Fill.Kind = None
           Padding.Left = 3.000000000000000000
@@ -184,7 +183,7 @@ object FrmMain: TFrmMain
           Size.Width = 243.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
-          object lblAlerta: TLabel
+          object lblAlertaCard1: TLabel
             Align = Top
             StyledSettings = [Family, Style, FontColor]
             Position.X = 3.000000000000000000
@@ -197,7 +196,7 @@ object FrmMain: TFrmMain
             Text = 'Alerta: 11'
             TabOrder = 4
           end
-          object lblDataAlerta: TLabel
+          object lblDataAlertaCard1: TLabel
             Align = Bottom
             Position.X = 3.000000000000000000
             Position.Y = 25.000000000000000000
@@ -209,7 +208,7 @@ object FrmMain: TFrmMain
             TabOrder = 7
           end
         end
-        object rec_pendente: TRectangle
+        object rec_pendente_card1: TRectangle
           Align = Client
           Fill.Kind = None
           Padding.Left = 3.000000000000000000
@@ -221,7 +220,7 @@ object FrmMain: TFrmMain
           Size.Width = 243.000000000000000000
           Size.Height = 196.000000000000000000
           Size.PlatformDefault = False
-          object lblPendente: TLabel
+          object lblPendenteCard1: TLabel
             Align = Top
             StyledSettings = [Family, Style, FontColor]
             Margins.Bottom = 8.000000000000000000
@@ -235,7 +234,7 @@ object FrmMain: TFrmMain
             Text = 'Pendente'
             TabOrder = 4
           end
-          object lsvPendente: TListView
+          object lsvPendenteCard1: TListView
             ItemAppearanceClassName = 'TDynamicAppearance'
             ItemEditAppearanceClassName = 'TDynamicAppearance'
             HeaderAppearanceClassName = 'TListHeaderObjects'
@@ -277,7 +276,7 @@ object FrmMain: TFrmMain
             ItemAppearanceObjects.FooterObjects.Text.PlaceOffset.Y = -4.000000000000000000
           end
         end
-        object rec_erro: TRectangle
+        object rec_erro_card1: TRectangle
           Align = Top
           Fill.Kind = None
           Padding.Left = 3.000000000000000000
@@ -291,7 +290,7 @@ object FrmMain: TFrmMain
           Size.Width = 243.000000000000000000
           Size.Height = 50.000000000000000000
           Size.PlatformDefault = False
-          object lblErro: TLabel
+          object lblErroCard1: TLabel
             Align = Top
             StyledSettings = [Family, Style, FontColor]
             Position.X = 3.000000000000000000
@@ -304,7 +303,1175 @@ object FrmMain: TFrmMain
             Text = 'Erros: 3'
             TabOrder = 4
           end
-          object lblDataErro: TLabel
+          object lblDataErroCard1: TLabel
+            Align = Bottom
+            Position.X = 3.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.HorzAlign = Center
+            Text = '01/12/2022 01:00:05'
+            TabOrder = 7
+          end
+        end
+      end
+    end
+    object Card2: TLayout
+      Padding.Left = 2.000000000000000000
+      Padding.Top = 2.000000000000000000
+      Padding.Right = 2.000000000000000000
+      Padding.Bottom = 2.000000000000000000
+      Position.X = 312.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 257.000000000000000000
+      Size.Height = 505.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      object rec_card2: TRectangle
+        Align = Client
+        Fill.Color = claWhite
+        Padding.Left = 5.000000000000000000
+        Padding.Top = 5.000000000000000000
+        Padding.Right = 5.000000000000000000
+        Padding.Bottom = 5.000000000000000000
+        Size.Width = 253.000000000000000000
+        Size.Height = 501.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claBlue
+        XRadius = 5.000000000000000000
+        YRadius = 5.000000000000000000
+        object rec_sigla_card2: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 5.000000000000000000
+          Sides = [Bottom]
+          Size.Width = 243.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          object lblDataSincCard2: TLabel
+            Align = Bottom
+            StyledSettings = [Family, Style, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 35.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = '01/12/2022 01:00:05'
+            TabOrder = 0
+          end
+          object lblSiglaCard2: TLabel
+            Align = Top
+            StyledSettings = [Family, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 24.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '001'
+            TabOrder = 1
+          end
+        end
+        object rec_enviado_card2: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 75.000000000000000000
+          Sides = [Bottom]
+          Size.Width = 243.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          object lblEnviadoCard2: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Enviados: 15280'
+            TabOrder = 4
+          end
+          object lblDataEnviadoCard2: TLabel
+            Align = Bottom
+            Position.X = 3.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.HorzAlign = Center
+            Text = '01/12/2022 01:00:05'
+            TabOrder = 7
+          end
+        end
+        object rec_recebido_card2: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 130.000000000000000000
+          Sides = [Bottom]
+          Size.Width = 243.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          object lblRecebidoCard2: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Recebido: 6259'
+            TabOrder = 4
+          end
+          object lblDataRecebidoCard2: TLabel
+            Align = Bottom
+            Position.X = 3.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.HorzAlign = Center
+            Text = '01/12/2022 01:00:05'
+            TabOrder = 7
+          end
+        end
+        object rec_mensagem_card2: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 185.000000000000000000
+          Sides = [Bottom]
+          Size.Width = 243.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          object lblAlertaCard2: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Alerta: 11'
+            TabOrder = 4
+          end
+          object lblDataAlertaCard2: TLabel
+            Align = Bottom
+            Position.X = 3.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.HorzAlign = Center
+            Text = '01/12/2022 01:00:05'
+            TabOrder = 7
+          end
+        end
+        object rec_pendente_card2: TRectangle
+          Align = Client
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Sides = []
+          Size.Width = 243.000000000000000000
+          Size.Height = 196.000000000000000000
+          Size.PlatformDefault = False
+          object lblPendenteCard2: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Margins.Bottom = 8.000000000000000000
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Pendente'
+            TabOrder = 4
+          end
+          object lsvPendenteCard2: TListView
+            ItemAppearanceClassName = 'TDynamicAppearance'
+            ItemEditAppearanceClassName = 'TDynamicAppearance'
+            HeaderAppearanceClassName = 'TListHeaderObjects'
+            FooterAppearanceClassName = 'TListHeaderObjects'
+            Align = Client
+            Size.Width = 237.000000000000000000
+            Size.Height = 160.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 5
+            ItemAppearance.ItemHeight = 30
+            ItemAppearance.ItemEditHeight = 30
+            ItemAppearance.HeaderHeight = 1
+            ItemAppearance.FooterHeight = 1
+            ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+              item
+                AppearanceObjectName = 'txtLog'
+                AppearanceClassName = 'TTextObjectAppearance'
+                Appearance.Width = 113.000000000000000000
+                Appearance.Height = 20.000000000000000000
+                Appearance.PlaceOffset.X = 69.000000000000000000
+                Appearance.PlaceOffset.Y = 4.000000000000000000
+              end
+              item
+                AppearanceObjectName = 'txtQtdLog'
+                AppearanceClassName = 'TTextObjectAppearance'
+                Appearance.Width = 63.000000000000000000
+                Appearance.Height = 20.000000000000000000
+                Appearance.PlaceOffset.X = 3.000000000000000000
+                Appearance.PlaceOffset.Y = 4.000000000000000000
+              end>
+            ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+              item
+                AppearanceObjectName = 'Text1'
+                AppearanceClassName = 'TTextObjectAppearance'
+              end>
+            ItemAppearanceObjects.HeaderObjects.Text.Width = 196.000000000000000000
+            ItemAppearanceObjects.HeaderObjects.Text.Height = 1.000000000000000000
+            ItemAppearanceObjects.FooterObjects.Text.Width = 196.000000000000000000
+            ItemAppearanceObjects.FooterObjects.Text.PlaceOffset.Y = -4.000000000000000000
+          end
+        end
+        object rec_erro_card2: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 240.000000000000000000
+          Sides = [Bottom]
+          Size.Width = 243.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          object lblErroCard2: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Erros: 3'
+            TabOrder = 4
+          end
+          object lblDataErroCard2: TLabel
+            Align = Bottom
+            Position.X = 3.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.HorzAlign = Center
+            Text = '01/12/2022 01:00:05'
+            TabOrder = 7
+          end
+        end
+      end
+    end
+    object Card3: TLayout
+      Padding.Left = 2.000000000000000000
+      Padding.Top = 2.000000000000000000
+      Padding.Right = 2.000000000000000000
+      Padding.Bottom = 2.000000000000000000
+      Position.X = 592.000000000000000000
+      Position.Y = 32.000000000000000000
+      Size.Width = 257.000000000000000000
+      Size.Height = 505.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object rec_card_3: TRectangle
+        Align = Client
+        Fill.Color = claWhite
+        Padding.Left = 5.000000000000000000
+        Padding.Top = 5.000000000000000000
+        Padding.Right = 5.000000000000000000
+        Padding.Bottom = 5.000000000000000000
+        Size.Width = 253.000000000000000000
+        Size.Height = 501.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claBlue
+        XRadius = 5.000000000000000000
+        YRadius = 5.000000000000000000
+        object rec_sigla_card3: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 5.000000000000000000
+          Sides = [Bottom]
+          Size.Width = 243.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          object lblDataSincCard3: TLabel
+            Align = Bottom
+            StyledSettings = [Family, Style, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 35.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = '01/12/2022 01:00:05'
+            TabOrder = 0
+          end
+          object lblSiglaCard3: TLabel
+            Align = Top
+            StyledSettings = [Family, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 24.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '001'
+            TabOrder = 1
+          end
+        end
+        object rec_enviado_card3: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 75.000000000000000000
+          Sides = [Bottom]
+          Size.Width = 243.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          object lblEnviadoCard3: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Enviados: 15280'
+            TabOrder = 4
+          end
+          object lblDataEnviadoCard3: TLabel
+            Align = Bottom
+            Position.X = 3.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.HorzAlign = Center
+            Text = '01/12/2022 01:00:05'
+            TabOrder = 7
+          end
+        end
+        object rec_recebido_card3: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 130.000000000000000000
+          Sides = [Bottom]
+          Size.Width = 243.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          object lblRecebidoCard3: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Recebido: 6259'
+            TabOrder = 4
+          end
+          object lblDataRecebidoCard3: TLabel
+            Align = Bottom
+            Position.X = 3.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.HorzAlign = Center
+            Text = '01/12/2022 01:00:05'
+            TabOrder = 7
+          end
+        end
+        object rec_mensagem_card3: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 185.000000000000000000
+          Sides = [Bottom]
+          Size.Width = 243.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          object lblAlertaCard3: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Alerta: 11'
+            TabOrder = 4
+          end
+          object lblDataAlertaCard3: TLabel
+            Align = Bottom
+            Position.X = 3.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.HorzAlign = Center
+            Text = '01/12/2022 01:00:05'
+            TabOrder = 7
+          end
+        end
+        object rec_pendente_card3: TRectangle
+          Align = Client
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Sides = []
+          Size.Width = 243.000000000000000000
+          Size.Height = 196.000000000000000000
+          Size.PlatformDefault = False
+          object lblPendenteCard3: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Margins.Bottom = 8.000000000000000000
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Pendente'
+            TabOrder = 4
+          end
+          object lsvPendenteCard3: TListView
+            ItemAppearanceClassName = 'TDynamicAppearance'
+            ItemEditAppearanceClassName = 'TDynamicAppearance'
+            HeaderAppearanceClassName = 'TListHeaderObjects'
+            FooterAppearanceClassName = 'TListHeaderObjects'
+            Align = Client
+            Size.Width = 237.000000000000000000
+            Size.Height = 160.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 5
+            ItemAppearance.ItemHeight = 30
+            ItemAppearance.ItemEditHeight = 30
+            ItemAppearance.HeaderHeight = 1
+            ItemAppearance.FooterHeight = 1
+            ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+              item
+                AppearanceObjectName = 'txtLog'
+                AppearanceClassName = 'TTextObjectAppearance'
+                Appearance.Width = 113.000000000000000000
+                Appearance.Height = 20.000000000000000000
+                Appearance.PlaceOffset.X = 69.000000000000000000
+                Appearance.PlaceOffset.Y = 4.000000000000000000
+              end
+              item
+                AppearanceObjectName = 'txtQtdLog'
+                AppearanceClassName = 'TTextObjectAppearance'
+                Appearance.Width = 63.000000000000000000
+                Appearance.Height = 20.000000000000000000
+                Appearance.PlaceOffset.X = 3.000000000000000000
+                Appearance.PlaceOffset.Y = 4.000000000000000000
+              end>
+            ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+              item
+                AppearanceObjectName = 'Text1'
+                AppearanceClassName = 'TTextObjectAppearance'
+              end>
+            ItemAppearanceObjects.HeaderObjects.Text.Width = 196.000000000000000000
+            ItemAppearanceObjects.HeaderObjects.Text.Height = 1.000000000000000000
+            ItemAppearanceObjects.FooterObjects.Text.Width = 196.000000000000000000
+            ItemAppearanceObjects.FooterObjects.Text.PlaceOffset.Y = -4.000000000000000000
+          end
+        end
+        object rec_erro_card3: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 240.000000000000000000
+          Sides = [Bottom]
+          Size.Width = 243.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          object lblErroCard3: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Erros: 3'
+            TabOrder = 4
+          end
+          object lblDataErroCard3: TLabel
+            Align = Bottom
+            Position.X = 3.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.HorzAlign = Center
+            Text = '01/12/2022 01:00:05'
+            TabOrder = 7
+          end
+        end
+      end
+    end
+    object Card4: TLayout
+      Padding.Left = 2.000000000000000000
+      Padding.Top = 2.000000000000000000
+      Padding.Right = 2.000000000000000000
+      Padding.Bottom = 2.000000000000000000
+      Position.X = 874.000000000000000000
+      Position.Y = 33.000000000000000000
+      Size.Width = 257.000000000000000000
+      Size.Height = 505.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      object rec_card_4: TRectangle
+        Align = Client
+        Fill.Color = claWhite
+        Padding.Left = 5.000000000000000000
+        Padding.Top = 5.000000000000000000
+        Padding.Right = 5.000000000000000000
+        Padding.Bottom = 5.000000000000000000
+        Size.Width = 253.000000000000000000
+        Size.Height = 501.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claBlue
+        XRadius = 5.000000000000000000
+        YRadius = 5.000000000000000000
+        object rec_sigla_card4: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 5.000000000000000000
+          Sides = [Bottom]
+          Size.Width = 243.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          object lblDataSincCard4: TLabel
+            Align = Bottom
+            StyledSettings = [Family, Style, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 35.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = '01/12/2022 01:00:05'
+            TabOrder = 0
+          end
+          object lblSiglaCard4: TLabel
+            Align = Top
+            StyledSettings = [Family, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 24.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '001'
+            TabOrder = 1
+          end
+        end
+        object rec_enviado_card4: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 75.000000000000000000
+          Sides = [Bottom]
+          Size.Width = 243.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          object lblEnviadoCard4: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Enviados: 15280'
+            TabOrder = 4
+          end
+          object lblDataEnviadoCard4: TLabel
+            Align = Bottom
+            Position.X = 3.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.HorzAlign = Center
+            Text = '01/12/2022 01:00:05'
+            TabOrder = 7
+          end
+        end
+        object rec_recebido_card4: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 130.000000000000000000
+          Sides = [Bottom]
+          Size.Width = 243.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          object lblRecebidoCard4: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Recebido: 6259'
+            TabOrder = 4
+          end
+          object lblDataRecebidoCard4: TLabel
+            Align = Bottom
+            Position.X = 3.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.HorzAlign = Center
+            Text = '01/12/2022 01:00:05'
+            TabOrder = 7
+          end
+        end
+        object rec_mensagem_card4: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 185.000000000000000000
+          Sides = [Bottom]
+          Size.Width = 243.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          object lblAlertaCard4: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Alerta: 11'
+            TabOrder = 4
+          end
+          object lblDataAlertaCard4: TLabel
+            Align = Bottom
+            Position.X = 3.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.HorzAlign = Center
+            Text = '01/12/2022 01:00:05'
+            TabOrder = 7
+          end
+        end
+        object rec_pendente_card4: TRectangle
+          Align = Client
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Sides = []
+          Size.Width = 243.000000000000000000
+          Size.Height = 196.000000000000000000
+          Size.PlatformDefault = False
+          object lblPendenteCard4: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Margins.Bottom = 8.000000000000000000
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Pendente'
+            TabOrder = 4
+          end
+          object lsvPendenteCard4: TListView
+            ItemAppearanceClassName = 'TDynamicAppearance'
+            ItemEditAppearanceClassName = 'TDynamicAppearance'
+            HeaderAppearanceClassName = 'TListHeaderObjects'
+            FooterAppearanceClassName = 'TListHeaderObjects'
+            Align = Client
+            Size.Width = 237.000000000000000000
+            Size.Height = 160.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 5
+            ItemAppearance.ItemHeight = 30
+            ItemAppearance.ItemEditHeight = 30
+            ItemAppearance.HeaderHeight = 1
+            ItemAppearance.FooterHeight = 1
+            ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+              item
+                AppearanceObjectName = 'txtLog'
+                AppearanceClassName = 'TTextObjectAppearance'
+                Appearance.Width = 113.000000000000000000
+                Appearance.Height = 20.000000000000000000
+                Appearance.PlaceOffset.X = 69.000000000000000000
+                Appearance.PlaceOffset.Y = 4.000000000000000000
+              end
+              item
+                AppearanceObjectName = 'txtQtdLog'
+                AppearanceClassName = 'TTextObjectAppearance'
+                Appearance.Width = 63.000000000000000000
+                Appearance.Height = 20.000000000000000000
+                Appearance.PlaceOffset.X = 3.000000000000000000
+                Appearance.PlaceOffset.Y = 4.000000000000000000
+              end>
+            ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+              item
+                AppearanceObjectName = 'Text1'
+                AppearanceClassName = 'TTextObjectAppearance'
+              end>
+            ItemAppearanceObjects.HeaderObjects.Text.Width = 196.000000000000000000
+            ItemAppearanceObjects.HeaderObjects.Text.Height = 1.000000000000000000
+            ItemAppearanceObjects.FooterObjects.Text.Width = 196.000000000000000000
+            ItemAppearanceObjects.FooterObjects.Text.PlaceOffset.Y = -4.000000000000000000
+          end
+        end
+        object rec_erro_card4: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 240.000000000000000000
+          Sides = [Bottom]
+          Size.Width = 243.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          object lblErroCard4: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Erros: 3'
+            TabOrder = 4
+          end
+          object lblDataErroCard4: TLabel
+            Align = Bottom
+            Position.X = 3.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.HorzAlign = Center
+            Text = '01/12/2022 01:00:05'
+            TabOrder = 7
+          end
+        end
+      end
+    end
+    object Card5: TLayout
+      Padding.Left = 2.000000000000000000
+      Padding.Top = 2.000000000000000000
+      Padding.Right = 2.000000000000000000
+      Padding.Bottom = 2.000000000000000000
+      Position.X = 1154.000000000000000000
+      Position.Y = 33.000000000000000000
+      Size.Width = 257.000000000000000000
+      Size.Height = 505.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object rec_card_5: TRectangle
+        Align = Client
+        Fill.Color = claWhite
+        Padding.Left = 5.000000000000000000
+        Padding.Top = 5.000000000000000000
+        Padding.Right = 5.000000000000000000
+        Padding.Bottom = 5.000000000000000000
+        Size.Width = 253.000000000000000000
+        Size.Height = 501.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Color = claBlue
+        XRadius = 5.000000000000000000
+        YRadius = 5.000000000000000000
+        object rec_sigla_card5: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 10.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 5.000000000000000000
+          Sides = [Bottom]
+          Size.Width = 243.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          object lblDataSincCard5: TLabel
+            Align = Bottom
+            StyledSettings = [Family, Style, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 35.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = '01/12/2022 01:00:05'
+            TabOrder = 0
+          end
+          object lblSiglaCard5: TLabel
+            Align = Top
+            StyledSettings = [Family, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 22.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 24.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = '001'
+            TabOrder = 1
+          end
+        end
+        object rec_enviado_card5: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 75.000000000000000000
+          Sides = [Bottom]
+          Size.Width = 243.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          object lblEnviadoCard5: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Enviados: 15280'
+            TabOrder = 4
+          end
+          object lblDataEnviadoCard5: TLabel
+            Align = Bottom
+            Position.X = 3.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.HorzAlign = Center
+            Text = '01/12/2022 01:00:05'
+            TabOrder = 7
+          end
+        end
+        object rec_recebido_card5: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 130.000000000000000000
+          Sides = [Bottom]
+          Size.Width = 243.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          object lblRecebidoCard5: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Recebido: 6259'
+            TabOrder = 4
+          end
+          object lblDataRecebidoCard5: TLabel
+            Align = Bottom
+            Position.X = 3.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.HorzAlign = Center
+            Text = '01/12/2022 01:00:05'
+            TabOrder = 7
+          end
+        end
+        object rec_mensagem_card5: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 185.000000000000000000
+          Sides = [Bottom]
+          Size.Width = 243.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          object lblAlertaCard5: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Alerta: 11'
+            TabOrder = 4
+          end
+          object lblDataAlertaCard5: TLabel
+            Align = Bottom
+            Position.X = 3.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.HorzAlign = Center
+            Text = '01/12/2022 01:00:05'
+            TabOrder = 7
+          end
+        end
+        object rec_pendente_card5: TRectangle
+          Align = Client
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Sides = []
+          Size.Width = 243.000000000000000000
+          Size.Height = 196.000000000000000000
+          Size.PlatformDefault = False
+          object lblPendenteCard5: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Margins.Bottom = 8.000000000000000000
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Pendente'
+            TabOrder = 4
+          end
+          object lsvPendenteCard5: TListView
+            ItemAppearanceClassName = 'TDynamicAppearance'
+            ItemEditAppearanceClassName = 'TDynamicAppearance'
+            HeaderAppearanceClassName = 'TListHeaderObjects'
+            FooterAppearanceClassName = 'TListHeaderObjects'
+            Align = Client
+            Size.Width = 237.000000000000000000
+            Size.Height = 160.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 5
+            ItemAppearance.ItemHeight = 30
+            ItemAppearance.ItemEditHeight = 30
+            ItemAppearance.HeaderHeight = 1
+            ItemAppearance.FooterHeight = 1
+            ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+              item
+                AppearanceObjectName = 'txtLog'
+                AppearanceClassName = 'TTextObjectAppearance'
+                Appearance.Width = 113.000000000000000000
+                Appearance.Height = 20.000000000000000000
+                Appearance.PlaceOffset.X = 69.000000000000000000
+                Appearance.PlaceOffset.Y = 4.000000000000000000
+              end
+              item
+                AppearanceObjectName = 'txtQtdLog'
+                AppearanceClassName = 'TTextObjectAppearance'
+                Appearance.Width = 63.000000000000000000
+                Appearance.Height = 20.000000000000000000
+                Appearance.PlaceOffset.X = 3.000000000000000000
+                Appearance.PlaceOffset.Y = 4.000000000000000000
+              end>
+            ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+              item
+                AppearanceObjectName = 'Text1'
+                AppearanceClassName = 'TTextObjectAppearance'
+              end>
+            ItemAppearanceObjects.HeaderObjects.Text.Width = 196.000000000000000000
+            ItemAppearanceObjects.HeaderObjects.Text.Height = 1.000000000000000000
+            ItemAppearanceObjects.FooterObjects.Text.Width = 196.000000000000000000
+            ItemAppearanceObjects.FooterObjects.Text.PlaceOffset.Y = -4.000000000000000000
+          end
+        end
+        object rec_erro_card5: TRectangle
+          Align = Top
+          Fill.Kind = None
+          Padding.Left = 3.000000000000000000
+          Padding.Top = 3.000000000000000000
+          Padding.Right = 3.000000000000000000
+          Padding.Bottom = 8.000000000000000000
+          Margins.Bottom = 5.000000000000000000
+          Position.X = 5.000000000000000000
+          Position.Y = 240.000000000000000000
+          Sides = [Bottom]
+          Size.Width = 243.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          object lblErroCard5: TLabel
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Position.X = 3.000000000000000000
+            Position.Y = 3.000000000000000000
+            Size.Width = 237.000000000000000000
+            Size.Height = 17.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 15.000000000000000000
+            TextSettings.HorzAlign = Center
+            Text = 'Erros: 3'
+            TabOrder = 4
+          end
+          object lblDataErroCard5: TLabel
             Align = Bottom
             Position.X = 3.000000000000000000
             Position.Y = 25.000000000000000000

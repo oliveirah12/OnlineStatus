@@ -1,0 +1,304 @@
+object frmCard: TfrmCard
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 510
+  ClientWidth = 720
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object layStatusCard: TLayout
+    Padding.Left = 2.000000000000000000
+    Padding.Top = 2.000000000000000000
+    Padding.Right = 2.000000000000000000
+    Padding.Bottom = 2.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 257.000000000000000000
+    Size.Height = 409.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object rec_card: TRectangle
+      Align = Client
+      Fill.Color = claWhite
+      Padding.Left = 5.000000000000000000
+      Padding.Top = 5.000000000000000000
+      Padding.Right = 5.000000000000000000
+      Padding.Bottom = 5.000000000000000000
+      Size.Width = 253.000000000000000000
+      Size.Height = 405.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claBlue
+      XRadius = 5.000000000000000000
+      YRadius = 5.000000000000000000
+      object rec_sigla: TRectangle
+        Align = Top
+        Fill.Kind = None
+        Padding.Left = 3.000000000000000000
+        Padding.Top = 3.000000000000000000
+        Padding.Right = 3.000000000000000000
+        Padding.Bottom = 8.000000000000000000
+        Margins.Bottom = 10.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 5.000000000000000000
+        Sides = [Bottom]
+        Size.Width = 243.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        object lblDataSinc: TLabel
+          Align = Bottom
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 3.000000000000000000
+          Position.Y = 35.000000000000000000
+          Size.Width = 237.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 14.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = '01/12/2022 01:00:05'
+          TabOrder = 0
+        end
+        object lblSigla: TLabel
+          Align = Top
+          StyledSettings = [Family, FontColor]
+          Position.X = 3.000000000000000000
+          Position.Y = 3.000000000000000000
+          Size.Width = 237.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 24.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.HorzAlign = Center
+          Text = '001'
+          TabOrder = 1
+        end
+      end
+      object rec_enviado: TRectangle
+        Align = Top
+        Fill.Kind = None
+        Padding.Left = 3.000000000000000000
+        Padding.Top = 3.000000000000000000
+        Padding.Right = 3.000000000000000000
+        Padding.Bottom = 8.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 75.000000000000000000
+        Sides = [Bottom]
+        Size.Width = 243.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        object lblEnviado: TLabel
+          Align = Top
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 3.000000000000000000
+          Position.Y = 3.000000000000000000
+          Size.Width = 237.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 15.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = 'Enviados: 15280'
+          TabOrder = 4
+        end
+        object lblDataEnviado: TLabel
+          Align = Bottom
+          Position.X = 3.000000000000000000
+          Position.Y = 25.000000000000000000
+          Size.Width = 237.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = '01/12/2022 01:00:05'
+          TabOrder = 7
+        end
+      end
+      object rec_recebido: TRectangle
+        Align = Top
+        Fill.Kind = None
+        Padding.Left = 3.000000000000000000
+        Padding.Top = 3.000000000000000000
+        Padding.Right = 3.000000000000000000
+        Padding.Bottom = 8.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 130.000000000000000000
+        Sides = [Bottom]
+        Size.Width = 243.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        object lblRecebido: TLabel
+          Align = Top
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 3.000000000000000000
+          Position.Y = 3.000000000000000000
+          Size.Width = 237.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 15.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = 'Recebido: 6259'
+          TabOrder = 4
+        end
+        object lblDataRecebido: TLabel
+          Align = Bottom
+          Position.X = 3.000000000000000000
+          Position.Y = 25.000000000000000000
+          Size.Width = 237.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = '01/12/2022 01:00:05'
+          TabOrder = 7
+        end
+      end
+      object rec_mensagem: TRectangle
+        Align = Top
+        Fill.Kind = None
+        Padding.Left = 3.000000000000000000
+        Padding.Top = 3.000000000000000000
+        Padding.Right = 3.000000000000000000
+        Padding.Bottom = 8.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 185.000000000000000000
+        Sides = [Bottom]
+        Size.Width = 243.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        object lblAlerta: TLabel
+          Align = Top
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 3.000000000000000000
+          Position.Y = 3.000000000000000000
+          Size.Width = 237.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 15.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = 'Alerta: 11'
+          TabOrder = 4
+        end
+        object lblDataAlerta: TLabel
+          Align = Bottom
+          Position.X = 3.000000000000000000
+          Position.Y = 25.000000000000000000
+          Size.Width = 237.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = '01/12/2022 01:00:05'
+          TabOrder = 7
+        end
+      end
+      object rec_pendente: TRectangle
+        Align = Client
+        Fill.Kind = None
+        Padding.Left = 3.000000000000000000
+        Padding.Top = 3.000000000000000000
+        Padding.Right = 3.000000000000000000
+        Padding.Bottom = 8.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Sides = []
+        Size.Width = 243.000000000000000000
+        Size.Height = 100.000000000000000000
+        Size.PlatformDefault = False
+        object lblPendente: TLabel
+          Align = Top
+          StyledSettings = [Family, Style, FontColor]
+          Margins.Bottom = 8.000000000000000000
+          Position.X = 3.000000000000000000
+          Position.Y = 3.000000000000000000
+          Size.Width = 237.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 15.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = 'Pendente'
+          TabOrder = 4
+        end
+        object lsvPendente: TListView
+          ItemAppearanceClassName = 'TDynamicAppearance'
+          ItemEditAppearanceClassName = 'TDynamicAppearance'
+          HeaderAppearanceClassName = 'TListHeaderObjects'
+          FooterAppearanceClassName = 'TListHeaderObjects'
+          Align = Client
+          Size.Width = 237.000000000000000000
+          Size.Height = 64.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 5
+          ItemAppearance.ItemHeight = 30
+          ItemAppearance.ItemEditHeight = 30
+          ItemAppearance.HeaderHeight = 1
+          ItemAppearance.FooterHeight = 1
+          ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+            item
+              AppearanceObjectName = 'txtLog'
+              AppearanceClassName = 'TTextObjectAppearance'
+              Appearance.Width = 113.000000000000000000
+              Appearance.Height = 20.000000000000000000
+              Appearance.PlaceOffset.X = 69.000000000000000000
+              Appearance.PlaceOffset.Y = 4.000000000000000000
+            end
+            item
+              AppearanceObjectName = 'txtQtdLog'
+              AppearanceClassName = 'TTextObjectAppearance'
+              Appearance.Width = 63.000000000000000000
+              Appearance.Height = 20.000000000000000000
+              Appearance.PlaceOffset.X = 3.000000000000000000
+              Appearance.PlaceOffset.Y = 4.000000000000000000
+            end>
+          ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+            item
+              AppearanceObjectName = 'Text1'
+              AppearanceClassName = 'TTextObjectAppearance'
+            end>
+          ItemAppearanceObjects.HeaderObjects.Text.Width = 196.000000000000000000
+          ItemAppearanceObjects.HeaderObjects.Text.Height = 1.000000000000000000
+          ItemAppearanceObjects.FooterObjects.Text.Width = 196.000000000000000000
+          ItemAppearanceObjects.FooterObjects.Text.PlaceOffset.Y = -4.000000000000000000
+        end
+      end
+      object rec_erro: TRectangle
+        Align = Top
+        Fill.Kind = None
+        Padding.Left = 3.000000000000000000
+        Padding.Top = 3.000000000000000000
+        Padding.Right = 3.000000000000000000
+        Padding.Bottom = 8.000000000000000000
+        Margins.Bottom = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Position.Y = 240.000000000000000000
+        Sides = [Bottom]
+        Size.Width = 243.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        object lblErro: TLabel
+          Align = Top
+          StyledSettings = [Family, Style, FontColor]
+          Position.X = 3.000000000000000000
+          Position.Y = 3.000000000000000000
+          Size.Width = 237.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 15.000000000000000000
+          TextSettings.HorzAlign = Center
+          Text = 'Erros: 3'
+          TabOrder = 4
+        end
+        object lblDataErro: TLabel
+          Align = Bottom
+          Position.X = 3.000000000000000000
+          Position.Y = 25.000000000000000000
+          Size.Width = 237.000000000000000000
+          Size.Height = 17.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.HorzAlign = Center
+          Text = '01/12/2022 01:00:05'
+          TabOrder = 7
+        end
+      end
+    end
+  end
+end

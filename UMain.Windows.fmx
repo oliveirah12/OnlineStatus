@@ -1,0 +1,57 @@
+inherited FrmMain_Windows: TFrmMain_Windows
+  DesignerMasterStyle = 0
+  inherited HorzScrollBox1: THorzScrollBox
+    Viewport.Width = 755.000000000000000000
+    Viewport.Height = 530.000000000000000000
+    inherited Card1: TLayout
+      inherited rec_card1: TRectangle
+        inherited rec_sigla_card1: TRectangle
+          inherited lblSiglaCard1: TLabel
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+          end
+        end
+        inherited rec_pendente_card1: TRectangle
+          inherited lsvPendenteCard1: TListView
+            Enabled = False
+          end
+        end
+      end
+    end
+    inherited Card2: TLayout
+      inherited rec_card2: TRectangle
+        inherited rec_sigla_card2: TRectangle
+          inherited lblSiglaCard2: TLabel
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+          end
+        end
+      end
+    end
+    inherited Card3: TLayout
+      inherited rec_card_3: TRectangle
+        inherited rec_sigla_card3: TRectangle
+          inherited lblSiglaCard3: TLabel
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+          end
+        end
+      end
+    end
+    inherited Card4: TLayout
+      inherited rec_card_4: TRectangle
+        inherited rec_sigla_card4: TRectangle
+          inherited lblSiglaCard4: TLabel
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+          end
+        end
+      end
+    end
+    inherited Card5: TLayout
+      inherited rec_card_5: TRectangle
+        inherited rec_sigla_card5: TRectangle
+          inherited lblSiglaCard5: TLabel
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+          end
+        end
+      end
+    end
+  end
+end

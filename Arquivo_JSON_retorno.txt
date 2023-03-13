@@ -1,0 +1,32 @@
+'{"codigoempresa":"00388","empresas":[
+
+{"sigla":"001","datasync":"2023-01-19T18:16:09.000Z",
+	"enviados":{"qtd":303,"data":"2023-01-19T18:14:02.000Z"},
+	"recebidos":{"qtd":1336,"data":"2023-01-19T17:49:08.000Z"},
+	"pendentes":[{"qtd":1,"tipoarquivo":"LOGS"}],
+	"erros":{"qtd":0,"data":null},
+	"mensagens":{"qtd":22,"data":"2023-01-18T08:01:29.000Z"}},
+
+{"sigla":"002","datasync":"2023-01-19T18:16:22.000Z",
+	"enviados":{"qtd":684,"data":"2023-01-19T17:48:19.000Z"},
+	"recebidos":{"qtd":443,"data":"2023-01-19T18:14:16.000Z"},
+	"pendentes":[{"qtd":1,"tipoarquivo":"LOGS"}],
+	"erros":{"qtd":0,"data":null},
+	"mensagens":{"qtd":22,"data":"2023-01-17T12:29:22.000Z"}},
+
+{"sigla":"003","datasync":"2023-01-19T18:16:16.000Z",
+	"enviados":{"qtd":12,"data":"2023-01-17T08:01:30.000Z"},
+	"recebidos":{"qtd":838,"data":"2023-01-19T18:14:10.000Z"},
+	"pendentes":[{"qtd":1,"tipoarquivo":"LOGS"}],
+	"erros":{"qtd":0,"data":null},
+	"mensagens":{"qtd":22,"data":"2023-01-18T08:01:16.000Z"}},
+
+{"sigla":"004","datasync":"2023-01-19T18:16:35.000Z",
+	"enviados":{"qtd":642,"data":"2023-01-19T18:16:33.000Z"},
+	"recebidos":{"qtd":571,"data":"2023-01-19T18:14:27.000Z"},
+	"pendentes":[],
+	"erros":{"qtd":0,"data":null},
+	"mensagens":{"qtd":21,"data":"2023-01-18T08:01:57.000Z"}}
+
+	]
+}'
